@@ -24,7 +24,7 @@ maven：3.6.3
 
 ### 数据库配置
 
-本环境默认使用 **mysql 8.0** ，用户名 **root **，密码 **root** ，数据库 **vulndemo **。如果需要可自行修改 **application.yaml** 中的配置。
+本环境默认使用 **mysql 8.0** ，用户名 **root** ，密码 **root** ，数据库 **vulndemo** 。如果需要可自行修改 **application.yaml** 中的配置。
 
 由于 demo 实现简单的用户**登录**、**注册**功能，需要在启动前创建 **users** 表，可运行以下 **DDL** 进行创建。
 
