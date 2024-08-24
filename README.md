@@ -14,7 +14,7 @@
 
 **数据库配置** 与 **URI 信息**可启动后访问 **index.html** 查看，与本 README 提供信息相同。
 
-<img src="assets/image-20240825003117265.png" alt="image-20240825003117265" style="zoom:20%;" />
+<img src="assets/image-20240825015944187.png" alt="image-20240825015944187" style="zoom:25%;" />
 
 ### 开发环境
 
@@ -61,41 +61,41 @@ Druid：/druid/
 java -jar VulnDemo-1.0-SNAPSHOT.jar
 ```
 
-<img src="assets/image-20240825004355216.png" alt="image-20240825004355216" style="zoom:40%;" />
+<img src="assets/image-20240825004355216.png" alt="image-20240825004355216" style="zoom:30%;" />
 
 服务默认开启 18080 端口。
 
-<img src="assets/image-20240825004556781.png" alt="image-20240825004556781" style="zoom:40%;" />
+<img src="assets/image-20240825015838915.png" alt="image-20240825015838915" style="zoom:25%;" />
 
 登录页。
 
-<img src="assets/image-20240825004627285.png" alt="image-20240825004627285" style="zoom:50%;" />
+<img src="assets/image-20240825004627285.png" alt="image-20240825004627285" style="zoom:40%;" />
 
 注册页，注册时不可重名。
 
-<img src="assets/image-20240825004648473.png" alt="image-20240825004648473" style="zoom:50%;" />
+<img src="assets/image-20240825004648473.png" alt="image-20240825004648473" style="zoom:40%;" />
 
 登录后可访问用户页，展示用户 id、username。
 
-<img src="assets/image-20240825004819069.png" alt="image-20240825004819069" style="zoom:50%;" />
+<img src="assets/image-20240825004819069.png" alt="image-20240825004819069" style="zoom:40%;" />
 
 ### Shiro-rce
 
 本环境 shiro 采用 1.9.0，未硬编码密钥，无法爆破出 shirokey。
 
-<img src="assets/image-20240825003945067.png" alt="image-20240825003945067" style="zoom:50%;" />
+<img src="assets/image-20240825003945067.png" alt="image-20240825003945067" style="zoom:30%;" />
 
 环境存在 actuator 端点泄漏，env 中无明显 shirokey 字段。
 
-<img src="assets/image-20240825005028541.png" alt="image-20240825005028541" style="zoom:50%;" />
+<img src="assets/image-20240825005028541.png" alt="image-20240825005028541" style="zoom:30%;" />
 
 访问 /actuator/heapdump 可下载 heapdump 文件。
 
-<img src="assets/image-20240825005610720.png" alt="image-20240825005610720" style="zoom:50%;" />
+<img src="assets/image-20240825005610720.png" alt="image-20240825005610720" style="zoom:30%;" />
 
 使用利用工具 **JDumpSpider** ，可获得内存中 shirokey。这里不知道为什么会有两个，能打就行...
 
-<img src="assets/image-20240825010204335.png" alt="image-20240825010204335" style="zoom:50%;" />
+<img src="assets/image-20240825010204335.png" alt="image-20240825010204335" style="zoom:30%;" />
 
 直接使用现成工具利用即可。
 
@@ -113,7 +113,7 @@ java -jar VulnDemo-1.0-SNAPSHOT.jar
 
 本环境后端采用 log4j2 记录日志，登录注册功能均可触发。
 
-<img src="assets/image-20240825011119840.png" alt="image-20240825011119840" style="zoom:50%;" />
+<img src="assets/image-20240825011119840.png" alt="image-20240825011119840" style="zoom:30%;" />
 
 <img src="assets/image-20240825011137406.png" alt="image-20240825011137406" style="zoom:40%;" />
 
