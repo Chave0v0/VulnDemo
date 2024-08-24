@@ -14,7 +14,7 @@
 
 **数据库配置** 与 **URI 信息**可启动后访问 **index.html** 查看，与本 README 提供信息相同。
 
-<img src="assets/image-20240825003117265.png" alt="image-20240825003117265" style="zoom:50%;" />
+<img src="assets/image-20240825003117265.png" alt="image-20240825003117265" style="zoom:30%;" />
 
 ### 开发环境
 
