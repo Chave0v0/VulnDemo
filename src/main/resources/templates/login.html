@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <script>
+        function submitLoginForm(event) {
+            event.preventDefault(); // 阻止默认的表单提交行为
+
+            // 获取表单元素
+            const username = document.querySelector('input[name="username"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+
+            // 创建 JSON 对象
+            const data = {
+                username: username,
+                password: password
+            };
+
+            // 发送 JSON 数据到服务器
+            fetch('/user/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json' // 设置请求头为 JSON
+                },
+                body: JSON.stringify(data) // 将数据对象转化为 JSON 字符串
+            })
+                .then(response => response.json()) // 解析 JSON 响应
+                .then(result => {
+                    // 处理服务器响应
+                    if (result.success) {
+                        alert(result.message);
+                        window.location.href = '/user/home'; // 登录成功后重定向
+                    } else {
+                        alert(result.message); // 显示错误信息
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Login Error');
+                });
+        }
+    </script>
+</head>
+<body>
+<h1>Login Page</h1>
+<form name="login" onsubmit="submitLoginForm(event)">
+    USERNAME: <input name="username" type="text" required/><br />
+    PASSWORD: <input name="password" type="password" required/><br />
+    <input type="submit" value="Login" />
+</form>
+<a href="/user/register">To Register</a><br>
+<a href="/index.html">To Index</a>
+</body>
+</html>
