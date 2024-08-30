@@ -65,8 +65,6 @@ java -jar VulnDemo-1.0-SNAPSHOT.jar
 
 服务默认开启 18080 端口。
 
-<img src="assets/image-20240825015838915.png" alt="image-20240825015838915" style="zoom:25%;" />
-
 登录页。
 
 <img src="assets/image-20240825004627285.png" alt="image-20240825004627285" style="zoom:40%;" />
