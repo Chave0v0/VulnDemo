@@ -43,6 +43,8 @@ public class ShiroConfig {
         definition.addPathDefinition("/user/logout", "anon");
         definition.addPathDefinition("/user/register", "anon");
         definition.addPathDefinition("/druid/*", "anon");
+        definition.addPathDefinition("/setup", "anon");
+        definition.addPathDefinition("/test", "anon");
         //添加登出filter
         definition.addPathDefinition("/user/logout", "logout");
         //设置需要认证访问的资源

@@ -10,10 +10,10 @@ management:
 
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/vulndemo?serverTimezone=UTC
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:oceanbase://obmt6j1xibor2q1s-mi.aliyun-cn-hangzhou-internet.oceanbase.cloud:3306/vulndemo
+    username: dev
+    password: ^ZuL3w%H.xGF,p_6/f*A}M_yyL/iW
+    driver-class-name: com.alipay.oceanbase.obproxy.mysql.jdbc.Driver
 
     druid:
       aop-patterns: com.atguigu.admin.*  #监控SpringBean
